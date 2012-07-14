@@ -4,9 +4,9 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
+ssh_user       = "octopress@localhost"
 ssh_port       = "22"
-document_root  = "~/website.com/"
+document_root  = "~/live.williamcombs.com"
 rsync_delete   = true
 deploy_default = "rsync"
 
@@ -238,6 +238,8 @@ task :rsync do
   end
   puts "## Deploying website via Rsync"
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
+  system("ln -s /home/octopress/williamcombs.com/pre-fix /home/octopress/live.williamcombs.com/pre-fix")
+  system("ln -s /home/octopress/williamcombs.com/post-fix /home/octopress/live.williamcombs.com/post-fix")
 end
 
 desc "deploy public directory to github pages"

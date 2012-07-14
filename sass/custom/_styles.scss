@@ -1,0 +1,121 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+/* import typography */
+@import "_typography.scss";
+/*
+body > header h1 {
+        font-size: 32px;
+	font-weight: normal;
+}
+*/
+
+html {
+	background:#ffffff;
+}
+.heading, body > header h1, h1, h2, h3, h4, h5, h6 {
+        font-size: 90px;
+	font-weight: normal;
+	line-height: 1;
+}
+h1 {
+        font-size: 52px;
+	font-weight: normal;
+	text-decoration: none;
+}
+h1 a:hover {
+	text-decoration: none;
+}
+
+
+body > header h2 {
+    font-size: 28px;
+	font-weight: normal;
+	line-height: .5;
+    color: rgb(255, 255, 255);
+}
+
+body > header h1 a, body > header h1 a:visited, body > header h1 a:hover {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+body {
+	max-width: 650px;
+	background:#ffffff;
+}
+
+body > footer {
+	font-family: "ColaborateThinRegular", sans-serif;
+    font-size: 14px;
+	background:#ffffff;
+}
+body > footer a {
+	text-decoration: none;
+}
+body > footer a:hover {
+    color: rgb(1, 129, 235);
+}
+
+body > div {
+	font-family: "OstrichSansMedium",serif;
+        font-size: 24px;
+	background:#ffffff;
+}
+body > nav {
+	font-family: "OstrichSansMedium",serif;
+        font-size: 28px;
+	background:#ffffff;
+}
+body > nav ul {
+	padding: 0em 0px 0px;
+}
+body > nav a {
+	font-family: "OstrichSansMedium",serif;
+        font-size: 28px;
+}
+div.entry-content {
+	font-family: "ColaborateThinRegular", sans-serif;
+    font-size: 18px;
+}
+article header p.meta {
+	font-family: "ColaborateThinRegular", sans-serif;
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+}
+body > nav a:hover {
+    color: rgb(1, 129, 235);
+}
+
+a:visited, #content .blog-index article h1 a:hover {
+	text-decoration: none;
+}
+
+.code-title, html .gist .gist-file .gist-meta a[href*="#file"], h3.filename, figure.code figcaption {
+	background: #CCC;
+}
+
+#figfooter {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#no-time-header {
+	padding-top: 0em;
+}
+
+.download-source, html .gist .gist-file .gist-meta a[href*="raw"], figure.code figcaption a {
+	position: relative;
+	padding-left: 0;
+}
+
+.basic-alignment.left, article img.left, article video.left, article .left.flash-video, aside.sidebar img.left, .basic-alignment.right, article img.right, article video.right, article .right.flash-video, aside.sidebar img.right {
+    font-size: 30px;
+	text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#blog-archives h1 a:hover {
+    text-decoration: none;
+}
