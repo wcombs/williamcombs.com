@@ -1,17 +1,28 @@
 ---
 layout: post
-title: "Arduino Event-Driven AV Remote - Send IR Signals on Apple TV Power-on"
+title: "Arduino Event-Driven Universal AV Remote"
+subtitle: "This is the subtitle."
 date: 2012-07-14 11:53
 comments: true
 published: false
-categories: 
+sidebar: false
+categories: tech
 ---
+<h3>Turn Everything on with Airplay</h3>
 
-The problem:
+__Problem__ - When using airplay, AppleTV turns on automatically but nothing else does, so your left fumbling with remotes.
+
+__Solution__ - Hack together an Arduino, photocell (light sensor), and a few infrared LEDs to make it happen.
+
+(VIDEO OF ME TURNING MUSIC ON AND POWER SWITCHING ON)
+
+
+Problem Details:
 
 When I want to listen to music on my AV system, I hit airplay on my idevice (in itunes/pandora/spotify) and my apple tv turns on and starts playing, but the other components do not. I have to fumble through a thousand remotes for the tv remote to power it on and change the hdmi source, then for the AV receiver remote for power and source and speaker select. The elegance of airplay is lost at this point. I know your thinking what's the big deal, first world problems etc.. But this is a simple problem, and should have a simple standard solution. I came up with a solution, but it was by no means simple.
 
-(VIDEO OF ME TURNING MUSIC ON AND POWER SWITCHING ON)
+
+<!-- more -->
 
 The solution:
 
