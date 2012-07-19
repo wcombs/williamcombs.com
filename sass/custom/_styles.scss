@@ -32,6 +32,7 @@ body > header h2 {
 	font-weight: normal;
 	line-height: .5;
     color: rgb(255, 255, 255);
+	font-family: "OstrichSansMedium",serif;
 }
 
 body > header h1 a, body > header h1 a:visited, body > header h1 a:hover {
@@ -61,6 +62,9 @@ body > div {
         font-size: 24px;
 	background:#ffffff;
 }
+body > div > div {
+	background:#eeeeee;
+}
 body > nav {
 	font-family: "OstrichSansMedium",serif;
         font-size: 28px;
@@ -81,6 +85,9 @@ article header p.meta {
 	font-family: "ColaborateThinRegular", sans-serif;
     font-size: 14px;
     color: rgb(100, 100, 100);
+}
+article footer p.meta {
+	font-family: "OstrichSansMedium",serif;
 }
 body > nav a:hover {
     color: rgb(1, 129, 235);
@@ -118,4 +125,17 @@ a:visited, #content .blog-index article h1 a:hover {
 
 #blog-archives h1 a:hover {
     text-decoration: none;
+}
+
+#blog-archives {
+	color: rgb(130,130,130);
+
+}
+#blog-archives a.category, #blog-archives time {
+	color: rgb(130,130,130);
+	font-family: "OstrichSansMedium",serif;
+}
+
+#blog-archives time {
+	top: 1.2em;
 }
