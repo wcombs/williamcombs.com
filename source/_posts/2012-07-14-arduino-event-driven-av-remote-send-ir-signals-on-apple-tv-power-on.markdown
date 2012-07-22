@@ -8,7 +8,7 @@ published: false
 sidebar: false
 categories: tech
 ---
-<h3>Turn Everything on with Airplay</h3>
+*Turn Everything on with Airplay*
 
 __Problem__ - When using airplay, AppleTV turns on automatically but nothing else does, so your left fumbling with remotes.
 
