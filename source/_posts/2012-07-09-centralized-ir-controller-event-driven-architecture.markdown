@@ -7,7 +7,8 @@ sidebar: false
 published: false
 categories: 
 ---
-More stuff
+*This post is a test*
+<!-- more -->
 
 {% img images/pics/photo1.JPG 'willpic1' 'Wills Pic 1' %}
 ```

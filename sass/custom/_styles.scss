@@ -28,6 +28,8 @@ h1 a:hover {
 
 article header {
 	margin-bottom: 0.5em;
+	padding-bottom: 0px;
+	background: none;
 }
 
 body > header h2 {
@@ -146,4 +148,8 @@ a:visited, #content .blog-index article h1 a:hover {
 strong {
 	font-family: "ColaborateRegular", sans-serif;
 	font-weight: normal;
+}
+
+#content .blog-index article h1 {
+    font-size: 52px;
 }

@@ -6,7 +6,8 @@ comments: true
 sidebar: false
 categories: 
 ---
-My name is Will Combs and I like to make stuff.
+*My name is Will Combs and I like to make stuff.*
+<!-- more -->
 
 I’ll define <em>stuff</em> in the scope of this site as any project that involves solving problems through the synthesis of readily available components and technologies. Basically, I’m a Linux Sysadmin by day (well, by night too), and I like to work with electronics and programming in my spare time, with the ultimate goal of making cool stuff.
 
