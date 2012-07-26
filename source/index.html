@@ -1,4 +1,5 @@
 ---
+Title: Index
 layout: default
 sidebar: false
 ---
@@ -13,10 +14,10 @@ sidebar: false
   {% endfor %}
   <div class="pagination">
     {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+      <a class="prev" href="{{paginator.next_page}}">&larr; Older Stuff</a>
     {% endif %}
     {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+    <a class="next" href="{{paginator.previous_page}}">Newer Stuff&rarr;</a>
     {% endif %}
   </div>
 </div>

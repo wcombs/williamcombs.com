@@ -1,5 +1,15 @@
 <ul class="main-navigation">
+{% if page.title == 'Archive' %}
+  <li><a href="{{ root_url }}/">Posts</a></li>
+  <li><a href="{{ root_url }}/blog/archives">Archiv<u>e</u></a></li>
+  <li><a href="{{ root_url }}/about">About</a></li>
+{% elsif page.title == "What's going on here?" %}
   <li><a href="{{ root_url }}/">Posts</a></li>
   <li><a href="{{ root_url }}/blog/archives">Archive</a></li>
+  <li><a href="{{ root_url }}/about">Abou<u>t</u></a></li>
+{% else %}
+  <li><a href="{{ root_url }}/">Post<u>s</u></a></li>
+  <li><a href="{{ root_url }}/blog/archives">Archive</a></li>
   <li><a href="{{ root_url }}/about">About</a></li>
+{% endif %}
 </ul>

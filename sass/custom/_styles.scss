@@ -145,6 +145,11 @@ a:visited, #content .blog-index article h1 a:hover {
 	top: 1.2em;
 }
 
+#blog-archives article {
+	background: none;
+}
+
+
 strong {
 	font-family: "ColaborateRegular", sans-serif;
 	font-weight: normal;
@@ -152,4 +157,45 @@ strong {
 
 #content .blog-index article h1 {
     font-size: 52px;
+}
+
+#content .blog-index a[rel="full-article"]:hover {
+    font-size: 28px;
+    background: none;
+    text-shadow: none;
+    color: rgb(1, 129, 235);
+    -moz-transition: color 0.3s ease 0s;
+}
+
+#content .blog-index a[rel="full-article"] {
+    font-size: 28px;
+    background: none;
+	padding: 0em 0px 0px;
+    text-decoration: none;
+	font-family: "OstrichSansMedium";
+}
+
+#content div.pagination {
+	background: none;
+}
+
+#content .blog-index footer {
+	border-bottom:2px dotted #aaaaaa;
+}
+
+#content .blog-index article {
+	background: none;
+}
+
+#content div.pagination a {
+    font-size: 28px;
+}
+#content div.pagination {
+	padding-bottom: 2.5em;
+}
+
+#blog-archives h2 {
+	font-size: 75px;
+}
+.nav-emphasis {
 }
