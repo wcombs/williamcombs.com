@@ -10,21 +10,15 @@ categories: tech
 ---
 *Turn Everything on with Airplay*
 <!-- more -->
+__tl;dr__ - I wanted all of my AV components to turn on and change inputs as soon as I started airplaying music to my AppleTV from my iPhone, so I popped open the AppleTV, wired up a photocell sensor to an Arduino Uno, wired up some Infrared LEDs, wrote some code, and made it happen. Here it is in action.
 
-__Problem__ - When using airplay, AppleTV turns on automatically but nothing else does, so your left fumbling with remotes.
+<iframe src="http://player.vimeo.com/video/40527165" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/40527165">Shuttle Pass 1 Georgetown</a> from <a href="http://vimeo.com/user10143591">Will Combs</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
-__Solution__ - Hack together an Arduino, photocell (light sensor), and a few infrared LEDs to make it happen.
+__Problem Details__
 
-(VIDEO OF ME TURNING MUSIC ON AND POWER SWITCHING ON)
+When I want to listen to music on my AV system, I hit airplay on my idevice (in itunes/pandora/spotify) and my apple tv turns on and starts playing, but the other components do not. I have to fumble through a thousand remotes for the tv remote to power it on and change the hdmi source, then for the AV receiver remote for power and source and speaker select. The elegance of airplay is lost at this point. I know your thinking what's the big deal, first world problems etc... But this is a simple problem, and should have a simple standard solution. I came up with a solution, but it was by no means simple.
 
-
-Problem Details:
-
-When I want to listen to music on my AV system, I hit airplay on my idevice (in itunes/pandora/spotify) and my apple tv turns on and starts playing, but the other components do not. I have to fumble through a thousand remotes for the tv remote to power it on and change the hdmi source, then for the AV receiver remote for power and source and speaker select. The elegance of airplay is lost at this point. I know your thinking what's the big deal, first world problems etc.. But this is a simple problem, and should have a simple standard solution. I came up with a solution, but it was by no means simple.
-
-
-
-The solution:
+__My Solution__
 
 First, I found what I thought was my solution, HDMI CEC. This standard in theory lets you control all devices from one remote, and makes devices like the TV listen for activity on the HDMI ports and power on and change sources automatically. The idea was perfect, but unfortunately at this point the implementation of this standard seems fragmented, with each manufacturer having their own proprietary version. My LG TV had its own version but none of my other components worked with that version. Also, from what I've found, no version of the AppleTV supports this yet.
 
@@ -34,11 +28,11 @@ At this point, I looked at my Ardunio UNO board, and figured this would be a per
 
 So, sending IR signals has been covered in detail, and there's more on my specific implementation below, but sensing when the AppleTV powers on was still a problem, a fun problem to solve.
 
-Sensing AppleTV Power-on:
+__Sensing AppleTV Power-on__
 
 AppleTV always in standby state if plugged in, but could theoretically check current draw and look for a threshold, assuming it uses more power when it actually is in use. Could maybe sense network traffic, but that is always on as well, using bonjour so it shows up on other idevices on the network. Then I thought about the power led, could tie into the wire that powers that led and sense current, then trigger power on. Not a good practice to physically connect to another circuit. Finally, thought of using a light sensor, a simple photocell, but the issue of ambient light made me wonder if it would work.  Turns out, if its inside the plastic enclosure, hardly any ambient light gets in, and it reliably senses the led no matter what the light conditions outside the case are.
 
-Sending IR Signals:
+__Sending IR Signals__
 
 show adafruit ir listener and sending code, to get already known codes
 
@@ -46,19 +40,19 @@ explain discrete codes and show pronto database, and pronto converter script
 
 show sending parts of code, just the functions for the different types of sending
 
-Building the Circuit:
+__Building the Circuit__
 
 breadboard, then protoshield
 
 link to circuit on circlab
 
-Writing the Code:
+__Writing the Code__
 
 link to helping code
 
 link to github for my code, bringing sending, listening code in together
 
-Final Product, and Other Ideas:
+__Final Product, and Other Ideas__
 
 show some pics, vids of it in action
 

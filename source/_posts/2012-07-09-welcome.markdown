@@ -6,9 +6,9 @@ comments: true
 sidebar: false
 categories: 
 ---
-*My name is Will Combs and I like to make stuff.*
+*to my site, hope you find something interesting...*
 <!-- more -->
 
-I’ll define <em>stuff</em> in the scope of this site as any project that involves solving problems through the synthesis of readily available components and technologies. Basically, I’m a Linux Sysadmin by day (well, by night too), and I like to work with electronics and programming in my spare time, with the ultimate goal of making cool stuff.
+It's about time I get my personal site up and running again. I'll be posting about Linux, Arduino, open source hardware/software, and anything else that I find interesting. Check out the [about](/about/index.html) section for more details.
 
-I’ve found that forums, blogs, and other online communities inspire and guide many of my projects. When you are stumped on a project there is nothing more helpful than finding a detailed write-up by another hobbyist who tackled a similar challenge, and this site is my attempt at providing more write-ups like this.
+Enjoy.
