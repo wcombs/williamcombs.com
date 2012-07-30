@@ -35,6 +35,7 @@ AppleTV always in standby state if plugged in, but could theoretically check cur
 __Sending IR Signals__
 
 show adafruit ir listener and sending code, to get already known codes
+Adafruit code enabled me to listen and recreate commands from remotes I have, but there is an issue with the tv remote, having only one power button, that turns it on if off and off if on.  Since I am not tracking the power state of the TV I needed a way to just send 'on' without turning off if already on, this is where discrete codes again.
 
 explain discrete codes and show pronto database, and pronto converter script
 
