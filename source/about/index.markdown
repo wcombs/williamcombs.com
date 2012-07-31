@@ -24,4 +24,5 @@ Check out my code on [Github](https://github.com/wcombs).
 
 Message me on [Twitter](https://twitter.com/combsw).
 
-*Last updated Jul 27, 2012*
+<br />
+<p style="color:rgb(130,130,130)"><em>Last updated Jul 27, 2012</em></p>

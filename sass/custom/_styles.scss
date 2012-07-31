@@ -207,3 +207,13 @@ span.categories {
 p, blockquote, ul, ol {
 	margin-bottom: .75em;
 }
+a {
+    color: rgb(0, 0, 0);
+}
+a:visited {
+    color: rgb(0, 0, 0);
+}
+a:hover {
+    color: rgb(1, 129, 235);
+    -moz-transition: color 0.3s ease 0s;
+}
