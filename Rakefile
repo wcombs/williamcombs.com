@@ -80,6 +80,9 @@ task :preview do
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
 
+  # ADDED - by wcombs, to link up images from dropbox dir for preview only
+  system("sleep 5 && ln -s /Users/wcombs/Dropbox/williamcombs.com_pics /Users/wcombs/code/git/williamcombs.com/public/images")
+
   trap("INT") {
     [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
@@ -370,6 +373,13 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+desc "Combs - Increment image defs"
+task :combsimagizer do
+  Dir.glob("#{source_dir}/#{posts_dir}/*.markdown").each do|f|
+    puts f
+  end
 end
 
 desc "list tasks"
