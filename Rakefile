@@ -8,7 +8,8 @@ ssh_user       = "octopress@localhost"
 ssh_port       = "22"
 document_root  = "~/live.williamcombs.com"
 rsync_delete   = true
-deploy_default = "rsync"
+deploy_default = "s3"
+s3_bucket      = "williamcombs.com"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -378,7 +379,15 @@ end
 desc "Combs - Increment image defs"
 task :combsimagizer do
   Dir.glob("#{source_dir}/#{posts_dir}/*.markdown").each do|f|
-    puts f
+    tmp_file = File.open(f + ".temp", 'w')
+    File.open(f, 'r+') do |file|
+      file.each_line do |line|
+        tmp_file.puts line.gsub(/MATCHTHIS/, 'SUBSTITUTED')
+      end
+      tmp_file.close
+      file.close
+      FileUtils.mv(f + ".temp", f)
+    end
   end
 end
 
@@ -386,4 +395,13 @@ desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
   puts "(type rake -T for more detail)\n\n"
+end
+
+desc "Deploy website via s3cmd with CloudFront cache invalidation"
+task :s3 do
+  puts "## Deploying website via s3cmd"
+  #ok_failed system("s3cmd sync --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
+  ok_failed system("s3cmd sync --acl-public --reduced-redundancy public/* s3://#{s3_bucket}/")
+  puts "## Deploying image dir via s3cmd"
+  ok_failed system("s3cmd sync /Users/wcombs/Dropbox/williamcombs.com_pics/ s3://#{s3_bucket}/images/")
 end
