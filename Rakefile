@@ -6,10 +6,10 @@ require "stringex"
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "octopress@localhost"
 ssh_port       = "22"
-document_root  = "~/live.williamcombs.com"
+document_root  = "~/live.williamcombs.com" # for rsync deploy
 rsync_delete   = true
 deploy_default = "s3"
-s3_bucket      = "williamcombs.com"
+s3_bucket      = "williamcombs.com" # for s3 deploy
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -400,8 +400,9 @@ end
 desc "Deploy website via s3cmd with CloudFront cache invalidation"
 task :s3 do
   puts "## Deploying website via s3cmd"
-  #ok_failed system("s3cmd sync --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
-  ok_failed system("s3cmd sync --acl-public --reduced-redundancy public/* s3://#{s3_bucket}/")
-  puts "## Deploying image dir via s3cmd"
-  ok_failed system("s3cmd sync /Users/wcombs/Dropbox/williamcombs.com_pics/ s3://#{s3_bucket}/images/")
+  puts "## Syncing Images from dropbox locally"
+  ok_failed system("rsync -av --delete /Users/wcombs/Dropbox/williamcombs.com_pics/ public/images/")
+ 
+  puts "## Syncing to s3"
+  ok_failed system("s3cmd sync --acl-public --delete-removed --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
 end

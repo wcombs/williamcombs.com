@@ -227,7 +227,7 @@ figure.code {
 }
 
 .figfooter {
-  border-radius: 0px 0px 5px 5px !important;
+  border-radius: 0px 0px 2px 2px !important;
 }
 
 .code-title {
@@ -238,7 +238,7 @@ figure.code {
   color: #474747;
   font-weight: normal;
   margin-bottom: 0;
-  @include border-top-radius(5px);
+  @include border-top-radius(2px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
   background: #aaaaaa image-url("code_bg.png") top repeat-x;
   border: 1px solid #565656;

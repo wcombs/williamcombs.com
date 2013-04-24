@@ -25,7 +25,11 @@ email:
 #    Jekyll & Plugins     #
 # ----------------------- #
 
+# add this to append cdn url to static content, for cloudfront etc
+cdn: http://cdn.williamcombs.com
+
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+# NOTE: If root is something other than "/" then cdn: option is not used
 root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
